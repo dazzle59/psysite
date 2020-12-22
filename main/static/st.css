@@ -1,0 +1,57 @@
+
+.navbar{
+    background:#008bf0;
+}
+.nav-link , .navbar-brand{
+    color: #f4f4f4;
+    cursor: pointer;
+}
+.nav-link{
+    margin-right: 1em !important;
+}
+.nav-link:hover{
+    background: #214ccf;
+    color: white !important;
+}
+.navbar-collapse{
+    justify-content: flex-end;
+}
+
+body{
+    background:#eaeaea
+}
+
+.layer_text div {
+    color: #FFF4F4;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    line-height: 56,25px
+    z-index: 3;
+}
+.layer_text div div{
+    color: #008bf0;
+    font-size: 24px;
+    line-height: 28,13px
+    z-index: 3;
+}
+.art_title{
+    border: 1px solid rgba(0,0,0,.125);
+    padding: 10px;
+    color: #008bf0;
+    font-size: 120%;
+}
+.art_title span{
+    color: black;
+    font-size: 80%;
+}
+.article{
+    color: black;
+    font-size: 75%;
+
+
+
+
+

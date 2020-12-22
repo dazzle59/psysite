@@ -1,0 +1,57 @@
+﻿{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<style>
+.button {
+    background-color: #008bf0;
+    border: none;
+    color: white;
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button:hover {
+  background: #214ccf;
+}
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+</style>
+<div class="row">
+	<div class="col-md-12">
+		<div class="input">
+			<form method="GET">
+				{{form}}
+			</form>
+		</div>
+		<form method="GET">
+			<span>Категории:</span>
+			<button class="button cat_button" type="submit" name="_children">Дети</button>
+			<button class="button cat_button" type="submit" name="_fears">Страхи</button>
+			<button class="button cat_button" type="submit" name="_complex">Комплексы</button>
+			<button class="button cat_button" type="submit" name="_other">Прочее</button>
+			<button class="button cat_button" type="submit" name="_delete">Очистить</button>
+		</form>
+	</div>
+</div>
+{% for art in article_list%}
+<div class="row">
+	<div class="col-md-12">
+		<div class="art_title">
+			{{art.article_name}}
+			<span> Категория: {{art.category.category_name}}</span>
+			<div class="article">
+				{{art.article_text}}
+			</div>
+		</div>
+	</div>
+</div>
+{%endfor%}
+{% endblock %}
+
+

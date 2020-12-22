@@ -1,0 +1,35 @@
+﻿{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+<div class="container pt-4">
+	<form method="post" id="form">
+		{% csrf_token %}
+		{{ form }}
+		<input type="submit" class="btn btn-success" value="Отправить сообщение"/>
+	</form>
+</div>
+{% endblock %}
+
+<script>
+    const form = document.getElementById('form');
+    form.addEventListener("submit", submitHandler);
+
+    function submitHandler(e) {
+        e.preventDefault();
+        $.ajax({
+            type        : 'POST',
+            url         : '{% url 'contact' %}',
+            data        : $('#form').serialize(),
+            dataType    : 'json',
+            success     : successFunction
+        });
+    }
+
+    function successFunction(msg) {
+        if (msg.message === 'success') {
+            alert('Success!');
+            form.reset()
+        }
+    }
+</script>

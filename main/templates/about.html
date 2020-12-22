@@ -1,0 +1,26 @@
+﻿{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<style>
+.col-md-6 {
+    padding: 20px;
+}
+</style>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<p><b>Работаю в направлениях:</b> Когнитивная терапия,
+				<br>Когнитивно-поведенческая терапия (КПТ),
+				<br>Поведенческая психотерапия</p>
+			<p><b>Город:</b> г. Пермь</p>
+			<p><b>День рождения:</b> 10 августа 1980 г.</p>
+			<p><b>Семейное положение:</b> Замужем</p>
+		</div>
+		<div class="col-md-6">
+			<img src="{% static 'Katherine.jpg' %}" class="img-fluid" alt="Responsive image">
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+
