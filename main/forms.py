@@ -24,9 +24,9 @@ class ContactForm(forms.ModelForm):
         model = Contact
         fields = ('name', 'email', 'message')#'__all__'
         widgets = {
-            'name': forms.TextInput(attrs={'size':'40', 'class': 'form-control', 'placeholder': 'Nome da UBC'}),
-            'email': forms.TextInput(attrs={'size':'40', 'class': 'form-control', 'placeholder': 'Nome da UBC'}),
-            'message': forms.Textarea(attrs={'style': 'height: 10em', 'class': 'form-control', 'placeholder': 'Nome da UBC'})
+            'name': forms.TextInput(attrs={'size':'40', 'class': 'form-control', 'placeholder': '---'}),
+            'email': forms.TextInput(attrs={'size':'40', 'class': 'form-control', 'placeholder': '8 900 00 000 00'}),
+            'message': forms.Textarea(attrs={'style': 'height: 10em', 'class': 'form-control', 'placeholder': '---'})
         }
         labels = {
             'name': _('Тема'),
