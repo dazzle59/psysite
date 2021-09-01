@@ -34,13 +34,16 @@
 			<br>Член Ассоциации когнитивно-бихевиоральных терапевтов (АКБТ)
 			<br>Работаю в направлениях: Когнитивная терапия, Когнитивно-поведенческая терапия (КПТ), Поведенческая психотерапия
 			<br>
-			<br>{% post_to_telegram <text_to_post> <@Lyadov_Anton> <post_to_telegram>  <link_class> %}
+
 		</div>
 <!--		<div class="row">
 			<video name='sample' controls autoplay="no" width='50%' height='50%'>
 				<source src="{% static 'sample2.mp4' %}" type="video/mp4"></source>
 			</video>
 		</div>-->
+		<div class="telegram-this">
+    		<a href="{{ telegram_url }}" class="{{ link_class }}" target="_blank">{{link_text}}</a>
+		</div>
 	</div>
 </div>
 {% endblock %}
